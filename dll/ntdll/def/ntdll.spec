@@ -691,7 +691,7 @@
 @ stdcall -stub -version=0x600+ RtlConnectToSm(ptr ptr long ptr)
 @ stdcall RtlConsoleMultiByteToUnicodeN(ptr long ptr ptr long ptr)
 @ stdcall RtlConvertExclusiveToShared(ptr)
-@ stub -version=0x600+ RtlConvertLCIDToString
+@ stdcall -version=0x600+ RtlConvertLCIDToString(long long long ptr long)
 @ stdcall -arch=win32 -ret64 RtlConvertLongToLargeInteger(long)
 @ stdcall RtlConvertSharedToExclusive(ptr)
 @ stdcall RtlConvertSidToUnicodeString(ptr ptr long)

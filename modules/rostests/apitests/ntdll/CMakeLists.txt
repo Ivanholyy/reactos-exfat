@@ -139,7 +139,10 @@ add_pch(ntdll_apitest precomp.h "${PCH_SKIP_SOURCE}")
 add_dependencies(ntdll_apitest load_notifications)
 
 if(NOT MSVC)
-    set_source_files_properties(RtlGetFullPathName_UstrEx.c PROPERTIES COMPILE_OPTIONS "-Wno-format")
+    set_source_files_properties(
+        RtlGetFullPathName_UstrEx.c
+        RtlLocale.c
+        PROPERTIES COMPILE_OPTIONS "-Wno-format")
 endif()
 
 add_rostests_file(TARGET ntdll_apitest)
